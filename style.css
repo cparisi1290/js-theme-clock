@@ -5,8 +5,18 @@
 }
 
 :root {
-  --primary-color: #000000;
+  --primary-color: #000;
   --secondary-color: #fff;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  --background-color: #111;
+  color: var(--primary-color);
 }
 
 body {
