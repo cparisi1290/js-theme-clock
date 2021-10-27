@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* primary color is hands of clock and text, for light mode */
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
@@ -31,4 +32,19 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+}
+
+.toggle {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+}
+
+.toggle:focus {
+  outline: none;
 }
