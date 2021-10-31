@@ -49,6 +49,7 @@ function setTime() {
     0,
     360
   )}deg)`;
+
   minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     minutes,
     0,
@@ -56,6 +57,7 @@ function setTime() {
     0,
     360
   )}deg)`;
+
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     seconds,
     0,
@@ -71,3 +73,4 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 };
 
 setTime();
+setInterval(setTime, 1000);
