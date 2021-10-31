@@ -35,8 +35,9 @@ toggle.addEventListener('click', (e) => {
 function setTime() {
   const time = new Date();
   //   console.log(time);
-  const months = time.getMonth();
-  const days = time.getDay();
+  const month = time.getMonth();
+  const day = time.getDay();
+  const date = time.getDate();
   const hours = time.getHours();
   const hoursForClock = hours % 12;
   const minutes = time.getMinutes();
@@ -70,6 +71,8 @@ function setTime() {
   timeEl.innerHTML = `${hoursForClock}:${
     minutes < 10 ? `0${minutes}` : minutes
   } ${ampm}`;
+
+  dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`;
 }
 
 // StackOverflow https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
